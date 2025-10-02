@@ -14,6 +14,7 @@ class PostModelTest(TestCase):
         """Проверка, что пост создаётся корректно"""
         self.assertEqual(self.post.title, "Тестовый заголовок")
         self.assertEqual(self.post.content, "Тестовое содержимое")
+        self.assertEqual(self.post.author, "Тестовый автор")
         self.assertTrue(self.post.created_at <= timezone.now())
 
     def test_post_str(self):
